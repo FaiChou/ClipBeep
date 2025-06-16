@@ -14,7 +14,7 @@ curl -L -o ~/bin/ClipBeep https://github.com/FaiChou/ClipBeep/releases/download/
 ```
 chmod +x ~/bin/ClipBeep
 mkdir -p ~/Library/LaunchAgents
-cat > ~/Library/LaunchAgents/com.faichou.clipbeep.plist << 'EOF'
+cat > ~/Library/LaunchAgents/com.faichou.clipbeep.plist << EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -24,7 +24,7 @@ cat > ~/Library/LaunchAgents/com.faichou.clipbeep.plist << 'EOF'
     <string>com.faichou.clipbeep</string>
     <key>ProgramArguments</key>
     <array>
-        <string>~/bin/ClipBeep</string>
+        <string>${HOME}/bin/ClipBeep</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
