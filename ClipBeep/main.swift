@@ -33,7 +33,8 @@ class ClipboardMonitor {
         let pasteboard = NSPasteboard.general
         if pasteboard.changeCount != lastChangeCount {
             lastChangeCount = pasteboard.changeCount
-            NSSound(named: NSSound.Name("Frog"))?.play()
+            NSSound(named: NSSound.Name(BEEP_NAME))?.play()
+            print("BEEP: \(Date())")
         }
     }
 }
