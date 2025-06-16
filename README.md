@@ -5,13 +5,14 @@ ClipBeep is a macOS application that plays a beep sound when the clipboard is ch
 ## Download
 
 ```
-curl -L -o /usr/local/bin/ClipBeep https://github.com/FaiChou/ClipBeep/releases/download/v1.0/ClipBeep
+mkdir -p ~/bin
+curl -L -o ~/bin/ClipBeep https://github.com/FaiChou/ClipBeep/releases/download/v1.0/ClipBeep
 ```
 
 ## Setup
 
 ```
-chmod +x /usr/local/bin/ClipBeep
+chmod +x ~/bin/ClipBeep
 mkdir -p ~/Library/LaunchAgents
 cat > ~/Library/LaunchAgents/com.faichou.clipbeep.plist << 'EOF'
 <?xml version="1.0" encoding="UTF-8"?>
@@ -23,7 +24,7 @@ cat > ~/Library/LaunchAgents/com.faichou.clipbeep.plist << 'EOF'
     <string>com.faichou.clipbeep</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/usr/local/bin/ClipBeep</string>
+        <string>~/bin/ClipBeep</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
@@ -45,5 +46,5 @@ launchctl load ~/Library/LaunchAgents/com.faichou.clipbeep.plist
 ```
 launchctl unload ~/Library/LaunchAgents/com.faichou.clipbeep.plist
 rm ~/Library/LaunchAgents/com.faichou.clipbeep.plist
-rm /usr/local/bin/ClipBeep
+rm ~/bin/ClipBeep
 ```
