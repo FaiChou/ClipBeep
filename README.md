@@ -6,6 +6,7 @@ ClipBeep is a macOS application that plays a beep sound when the clipboard is ch
 
 ```
 curl -L -o /usr/local/bin/ClipBeep https://github.com/FaiChou/ClipBeep/releases/download/v1.0/ClipBeep
+chmod +x /usr/local/bin/ClipBeep
 ```
 
 ## Setup
