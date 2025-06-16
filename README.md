@@ -2,16 +2,11 @@
 
 ClipBeep is a macOS application that plays a beep sound when the clipboard is changed.
 
-## Download
+## Install & Run
 
 ```
 mkdir -p ~/bin
 curl -L -o ~/bin/ClipBeep https://github.com/FaiChou/ClipBeep/releases/download/v1.0/ClipBeep
-```
-
-## Setup
-
-```
 chmod +x ~/bin/ClipBeep
 mkdir -p ~/Library/LaunchAgents
 cat > ~/Library/LaunchAgents/com.faichou.clipbeep.plist << EOF
@@ -33,11 +28,6 @@ cat > ~/Library/LaunchAgents/com.faichou.clipbeep.plist << EOF
 </dict>
 </plist>
 EOF
-```
-
-## Run
-
-```
 launchctl load ~/Library/LaunchAgents/com.faichou.clipbeep.plist
 ```
 
